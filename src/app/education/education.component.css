@@ -1,0 +1,65 @@
+:host{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem ;
+    gap: 3rem;
+    width: 100%;
+    border-radius: var(--cards-borderRadius);
+    background-image: var(--cards-bgTransparent);
+    color: aliceblue;
+    
+    & h1{
+        font-size: 3rem;
+        font-weight: 700;
+        text-shadow: var(--tittlePage);
+        letter-spacing: 5px;
+    }
+
+    & .container-cards{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        gap: 1rem;
+
+        & .card{
+            text-align: center;
+            width: 30%;
+            padding: 2rem 0;
+            background-image: linear-gradient(to bottom,transparent, rgba(128, 0, 128, 0.716)),linear-gradient(to top,transparent, purple);
+            border-radius: var(--cards-borderRadius);
+            
+            & h2{
+                margin: 2rem;
+                text-shadow: 0 0 3px white;
+                letter-spacing: 2px;
+                font-size: 2rem;
+            }
+
+            & p{
+                letter-spacing: 2px;
+                font-size: 1.1rem;
+            }
+
+            & .container-paragraph{
+                display: flex;
+                justify-content: center;
+
+                & :is(strong, p){
+                    letter-spacing: 2px;
+                    font-size: 1.1rem;
+                    margin: .5rem .2rem;
+                }
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,57 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    letter-spacing: 3px;
+    text-shadow: var(--tittlePage);
+    color: white;
+
+     & .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+        border-radius: var(--cards-borderRadius);
+        padding: 3rem 0;
+        background-image: var(--cards-bgTransparent);
+
+        & h2{
+            font-weight: 500;
+            font-size: 2rem;
+        }
+    
+        & .typing{
+            animation: escribir 2.5s steps(35) , transparente .5s step-end infinite alternate ;
+            text-align: center;
+            width: 90%;
+            font-size: 3em;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+        }
+    
+        & h3{
+            font-weight: 500;
+            font-size: 2rem;
+        }
+     }
+}
+
+
+@keyframes escribir {
+    0%{
+        width: 0;
+    }
+}
+
+
+@keyframes transparente {
+    50%{
+        border-color: transparent;
+    }
+    
+}
